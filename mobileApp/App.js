@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { CameraStack, ScannerStack, PhotosStack, HomeStack  } from './stacks.js';
 import Env from './setting/Env.ts';
 import { Provider, useDispatch } from 'react-redux'
+import store from './Store.js';
 
 const Tab = createBottomTabNavigator();
 // console.disableYellowBox = true; 
@@ -64,6 +65,7 @@ function App() {
   }, []);
   return (
     <NavigationContainer>
+      <Provider store={store}>
       <Tab.Navigator
         initialRouteName="HomeStack"
         tabBarOptions={{
@@ -86,6 +88,7 @@ function App() {
             />
             )})}
       </Tab.Navigator>
+      </Provider>
     </NavigationContainer>
   );
 }
