@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { CameraStack, ScannerStack, PhotosStack, HomeStack  } from './stacks.js';
 import Env from './setting/Env.ts';
+// import { Provider, useDispatch } from 'react-redux'
 
 const Tab = createBottomTabNavigator();
 // console.disableYellowBox = true; 
